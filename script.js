@@ -30,6 +30,7 @@ document.querySelectorAll("[data-current-year]").forEach((element) => {
 });
 
 const dataCache = new Map();
+const primaryAuthorName = "Tatsuya Yamada";
 
 async function loadJson(path) {
   if (dataCache.has(path)) {
@@ -49,38 +50,39 @@ async function loadJson(path) {
 
 function createPublicationItem(item) {
   const listItem = document.createElement("li");
-  const parts = [];
+  const content = document.createElement(item.url ? "a" : "span");
+
+  if (item.url) {
+    content.href = item.url;
+  }
 
   if (item.authors) {
-    parts.push(item.authors);
+    const authors = document.createElement("span");
+    const highlightedAuthors = item.authors.replaceAll(
+      primaryAuthorName,
+      `<span class="author-highlight">${primaryAuthorName}</span>`
+    );
+    authors.innerHTML = highlightedAuthors;
+    content.append(authors);
   }
 
   if (item.year) {
-    parts.push(`(${item.year})`);
+    content.append(` (${item.year})`);
   }
 
   if (item.title) {
-    parts.push(`"${item.title}."`);
+    content.append(` "${item.title}."`);
   }
 
   if (item.venue) {
-    parts.push(item.venue);
+    content.append(` ${item.venue}`);
   }
 
   if (item.details) {
-    parts.push(item.details);
+    content.append(` ${item.details}`);
   }
 
-  const text = parts.join(" ");
-
-  if (item.url) {
-    const link = document.createElement("a");
-    link.href = item.url;
-    link.textContent = text;
-    listItem.append(link);
-  } else {
-    listItem.textContent = text;
-  }
+  listItem.append(content);
 
   return listItem;
 }

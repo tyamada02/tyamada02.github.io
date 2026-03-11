@@ -41,58 +41,37 @@
       <main>
         <!-- Fixed content: name, affiliation, photo, and short summary. Update only when profile basics change. -->
         <section class="hero">
-          <div class="hero-copy">
-            <!-- NOTE: Replace with your public name. -->
-            <p class="eyebrow">Researcher</p>
-            <h1>Tatsuya Yamada（山田 達也）</h1>
-            <!-- NOTE: Replace with your current affiliation. -->
-            <p class="lead">
-              Master's student in the Department of Information Systems Engineering, Graduate School of Information Science and Technology, The University of Osaka.
-            </p>
-            <p class="lead">
-              大阪大学大学院 情報科学研究科 情報システム工学専攻 博士前期課程
-            </p>
-            <!-- NOTE: Replace with a short 1-2 sentence research summary. -->
-            <p class="lead">
-              My research interests include machine learning, especially causal representation learning, explainable AI, and temporal data analysis.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="/research/">View Research</a>
-              <a class="button button-secondary" href="/publications/">View Publications</a>
-            </div>
-            <div class="inline-links">
-              <!-- NOTE: Replace these placeholder URLs with your actual ORCID and GitHub profile links. -->
-              <a href="https://orcid.org/0000-0000-0000-0000">ORCID</a>
-              <a href="https://github.com/your-account">GitHub</a>
-            </div>
-          </div>
-          <aside class="hero-panel">
-            <p class="panel-label">Key Information</p>
+          <article class="hero-panel">
             <div class="info-split">
               <div class="info-copy">
-                <dl class="fact-list">
-                  <!-- NOTE: Keep this block in sync with your profile page. -->
-                  <div>
-                    <dt>Name / 氏名</dt>
-                    <dd>Tatsuya Yamada（山田 達也）</dd>
-                  </div>
-                  <div>
-                <dt>Affiliation / 所属</dt>
-                <dd>
-                  The University of Osaka, Graduate School of Information Science and Technology
-                  <span class="secondary-text">大阪大学大学院 情報科学研究科</span>
-                </dd>
+                <!-- NOTE: Replace with your public name. -->
+                <h1 class="hero-name">
+                  <span class="hero-name-main">Tatsuya Yamada</span>
+                  <span class="hero-name-sub">（山田 達也）</span>
+                </h1>
+                <!-- NOTE: Replace with your current affiliation. -->
+                <p class="panel-label">Affiliation</p>
+                <p class="lead">
+                  Department of Information Systems Engineering,
+                  Graduate School of Information Science and Technology,
+                  The University of Osaka
+                </p>
+                <p class="lead lead-note">
+                  （大阪大学大学院 情報科学研究科 情報システム工学専攻）
+                </p>
+                <p class="panel-label">Research Keywords</p>
+                <ul class="topic-list">
+                  <li>Causal Representation Learning</li>
+                  <li>Explainable AI</li>
+                  <li>Temporal Data Analysis</li>
+                </ul>
+                <p class="panel-label">Links</p>
+                <div class="inline-links">
+                  <!-- NOTE: Replace these URLs if your public profiles change. -->
+                  <a href="https://orcid.org/0009-0006-8674-4829">ORCID</a>
+                  <a href="https://github.com/tyamada02/">GitHub</a>
+                </div>
               </div>
-                  <div>
-                    <dt>Research Area</dt>
-                    <dd>Machine Learning</dd>
-                  </div>
-                  <div>
-                <dt>Keywords</dt>
-                <dd>Causal Representation Learning / Explainable AI / Temporal Data</dd>
-              </div>
-            </dl>
-          </div>
               <div class="info-photo">
                 <!-- NOTE: Replace /assets/profile-photo.png if you want to update the portrait later. -->
                 <img
@@ -102,13 +81,13 @@
                 />
               </div>
             </div>
-          </aside>
+          </article>
         </section>
 
         <!-- Semi-fixed content: keep this as a simple directory of the main pages. -->
         <section class="content-band">
           <div class="band-header">
-            <p class="section-tag">Main Pages</p>
+            <p class="section-tag">Page Links</p>
           </div>
           <div class="feature-grid">
             <a class="feature-card" href="/profile/">
