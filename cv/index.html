@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Tatsuya Yamada</title>
+    <meta
+      name="description"
+      content="CV page for Tatsuya Yamada."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body data-page="cv">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <span class="brand-mark">TY</span>
+          <span class="brand-text">
+            <strong>Tatsuya Yamada</strong>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/profile/">Profile</a>
+          <a href="/research/">Research</a>
+          <a href="/publications/">Publications</a>
+          <a href="/cv/">CV</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </header>
+
+      <main class="subpage-main">
+        <!-- Semi-fixed content: update this page when academic history or profile facts change. -->
+        <section class="page-intro narrow">
+          <p class="eyebrow">CV</p>
+          <h1>Curriculum Vitae</h1>
+          <p class="lead">
+            This page provides a compact overview of academic background, research interests, awards, and publications.
+          </p>
+        </section>
+
+        <section class="detail-grid single-column">
+          <article class="card">
+            <h2>Name</h2>
+            <p>Tatsuya Yamada（山田 達也）</p>
+          </article>
+
+          <article class="card">
+            <h2>Current Position</h2>
+            <p>
+              Master's student in the Department of Information Systems Engineering,
+              Graduate School of Information Science and Technology,
+              The University of Osaka.
+            </p>
+            <p class="secondary-text">
+              大阪大学大学院 情報科学研究科 情報システム工学専攻 博士前期課程
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Education</h2>
+            <div class="timeline">
+              <div>
+                <span class="timeline-year">Mar. 2021</span>
+                <p>Graduated from Miyazu High School.</p>
+              </div>
+              <div>
+                <span class="timeline-year">Apr. 2021</span>
+                <p>Entered the School of Engineering Science, The University of Osaka.</p>
+              </div>
+              <div>
+                <span class="timeline-year">Mar. 2025</span>
+                <p>Graduated from the School of Engineering Science, The University of Osaka.</p>
+              </div>
+              <div>
+                <span class="timeline-year">Apr. 2025</span>
+                <p>
+                  Entered the Master's Course in the Department of Information Systems Engineering,
+                  Graduate School of Information Science and Technology,
+                  The University of Osaka.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>Program</h2>
+            <div class="timeline">
+              <div>
+                <span class="timeline-year">Apr. 2025-Present</span>
+                <p>Enrolled in the Humanware Innovation Program, The University of Osaka.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>Research Interests</h2>
+            <ul class="policy-list">
+              <li>Machine Learning</li>
+              <li>Causal Representation Learning</li>
+              <li>Explainable AI</li>
+              <li>Temporal Data Analysis</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Awards</h2>
+            <!-- NOTE: Update data/awards.json instead of editing this list directly. -->
+            <ul class="policy-list stacked-items" data-awards-list="all"></ul>
+          </article>
+
+          <article class="card">
+            <h2>Publications</h2>
+            <!-- NOTE: Update data/publications.json instead of editing this list directly. -->
+            <ol class="publication-list" data-publications-list="papers"></ol>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-meta">© <span data-current-year></span> Tatsuya Yamada</p>
+      </footer>
+    </div>
+  </body>
+</html>

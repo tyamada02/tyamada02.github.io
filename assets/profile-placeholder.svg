@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="720" viewBox="0 0 600 720" role="img" aria-labelledby="title desc">
+  <title id="title">プロフィール写真プレースホルダ</title>
+  <desc id="desc">後で研究者本人の写真に差し替えるためのダミー画像です．</desc>
+  <rect width="600" height="720" fill="#f6f7f9" />
+  <rect x="40" y="40" width="520" height="640" fill="#ffffff" stroke="#d9dde3" stroke-width="4" />
+  <circle cx="300" cy="250" r="110" fill="#d7dde5" />
+  <path d="M150 555c28-92 94-138 150-138s122 46 150 138" fill="#d7dde5" />
+  <text x="300" y="625" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#5a6573">
+    Photo Placeholder
+  </text>
+</svg>

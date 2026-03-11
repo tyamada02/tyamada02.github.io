@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications | Tatsuya Yamada</title>
+    <meta
+      name="description"
+      content="Publications and presentations by Tatsuya Yamada."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body data-page="publications">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <span class="brand-mark">TY</span>
+          <span class="brand-text">
+            <strong>Tatsuya Yamada</strong>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/profile/">Profile</a>
+          <a href="/research/">Research</a>
+          <a href="/publications/">Publications</a>
+          <a href="/cv/">CV</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </header>
+
+      <main class="subpage-main">
+        <!-- Frequently updated content: publications and presentations should be maintained here. -->
+        <section class="page-intro">
+          <p class="eyebrow">Publications</p>
+          <h1>Publications</h1>
+          <p class="lead">
+            This page lists papers, presentations, and related academic outputs.
+          </p>
+        </section>
+
+        <!-- Frequently updated content: add new papers and talks in these lists. -->
+        <section class="detail-grid single-column">
+          <article class="card">
+            <h2>Papers</h2>
+            <!-- NOTE: Update data/publications.json instead of editing this list directly. -->
+            <ol class="publication-list" data-publications-list="papers"></ol>
+          </article>
+
+          <article class="card">
+            <h2>Talks and Presentations</h2>
+            <!-- NOTE: Update data/publications.json instead of editing this list directly. -->
+            <ol class="publication-list" data-publications-list="talks"></ol>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-meta">© <span data-current-year></span> Tatsuya Yamada</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "papers": [
+    {
+      "year": 2026,
+      "authors": "Tatsuya Yamada, Takuya Konishi, Yoshinobu Kawahara",
+      "title": "Predictive Fair Representation Learning with Variational Autoencoders",
+      "venue": "New Generation Computing",
+      "details": "accepted on March 10, 2026",
+      "url": ""
+    }
+  ],
+  "talks": []
+}

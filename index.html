@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatsuya Yamada</title>
+    <meta
+      name="description"
+      content="Personal academic website of Tatsuya Yamada, with research interests, publications, and profile."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body data-page="home">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <span class="brand-mark">TY</span>
+          <span class="brand-text">
+            <strong>Tatsuya Yamada</strong>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/profile/">Profile</a>
+          <a href="/research/">Research</a>
+          <a href="/publications/">Publications</a>
+          <a href="/cv/">CV</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Fixed content: name, affiliation, photo, and short summary. Update only when profile basics change. -->
+        <section class="hero">
+          <div class="hero-copy">
+            <!-- NOTE: Replace with your public name. -->
+            <p class="eyebrow">Researcher</p>
+            <h1>Tatsuya Yamada（山田 達也）</h1>
+            <!-- NOTE: Replace with your current affiliation. -->
+            <p class="lead">
+              Master's student in the Department of Information Systems Engineering, Graduate School of Information Science and Technology, The University of Osaka.
+            </p>
+            <p class="lead">
+              大阪大学大学院 情報科学研究科 情報システム工学専攻 博士前期課程
+            </p>
+            <!-- NOTE: Replace with a short 1-2 sentence research summary. -->
+            <p class="lead">
+              My research interests include machine learning, especially causal representation learning, explainable AI, and temporal data analysis.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="/research/">View Research</a>
+              <a class="button button-secondary" href="/publications/">View Publications</a>
+            </div>
+            <div class="inline-links">
+              <!-- NOTE: Replace these placeholder URLs with your actual ORCID and GitHub profile links. -->
+              <a href="https://orcid.org/0000-0000-0000-0000">ORCID</a>
+              <a href="https://github.com/your-account">GitHub</a>
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <p class="panel-label">Key Information</p>
+            <div class="info-split">
+              <div class="info-copy">
+                <dl class="fact-list">
+                  <!-- NOTE: Keep this block in sync with your profile page. -->
+                  <div>
+                    <dt>Name / 氏名</dt>
+                    <dd>Tatsuya Yamada（山田 達也）</dd>
+                  </div>
+                  <div>
+                <dt>Affiliation / 所属</dt>
+                <dd>
+                  The University of Osaka, Graduate School of Information Science and Technology
+                  <span class="secondary-text">大阪大学大学院 情報科学研究科</span>
+                </dd>
+              </div>
+                  <div>
+                    <dt>Research Area</dt>
+                    <dd>Machine Learning</dd>
+                  </div>
+                  <div>
+                <dt>Keywords</dt>
+                <dd>Causal Representation Learning / Explainable AI / Temporal Data</dd>
+              </div>
+            </dl>
+          </div>
+              <div class="info-photo">
+                <!-- NOTE: Replace /assets/profile-photo.png if you want to update the portrait later. -->
+                <img
+                  class="profile-photo"
+                  src="/assets/profile-photo.png"
+                  alt="Portrait of Tatsuya Yamada"
+                />
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Semi-fixed content: keep this as a simple directory of the main pages. -->
+        <section class="content-band">
+          <div class="band-header">
+            <p class="section-tag">Main Pages</p>
+          </div>
+          <div class="feature-grid">
+            <a class="feature-card" href="/profile/">
+              <strong>Profile</strong>
+              <span>Background, affiliation, and basic academic information.</span>
+            </a>
+            <a class="feature-card" href="/research/">
+              <strong>Research</strong>
+              <span>Research themes, interests, and current directions.</span>
+            </a>
+            <a class="feature-card" href="/publications/">
+              <strong>Publications</strong>
+              <span>Papers, talks, and related academic outputs.</span>
+            </a>
+            <a class="feature-card" href="/cv/">
+              <strong>CV</strong>
+              <span>A placeholder page until a full CV is added.</span>
+            </a>
+            <a class="feature-card" href="/contact/">
+              <strong>Contact</strong>
+              <span>Contact details will be added when finalized.</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="detail-grid">
+          <article class="card">
+            <p class="section-tag">Recent Updates</p>
+            <h2>Recent Publications</h2>
+            <!-- NOTE: Update data/publications.json instead of editing this list directly. -->
+            <ol class="publication-list" data-publications-list="recent-papers" data-limit="3"></ol>
+          </article>
+
+          <article class="card">
+            <p class="section-tag">Recent Updates</p>
+            <h2>Recent Awards</h2>
+            <!-- NOTE: Update data/awards.json instead of editing this list directly. -->
+            <ul class="policy-list stacked-items" data-awards-list="recent" data-limit="3"></ul>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-meta">© <span data-current-year></span> Tatsuya Yamada</p>
+      </footer>
+    </div>
+  </body>
+</html>

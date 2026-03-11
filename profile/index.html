@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Tatsuya Yamada</title>
+    <meta
+      name="description"
+      content="Profile page for Tatsuya Yamada, including affiliation, background, and research interests."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body data-page="profile">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <span class="brand-mark">TY</span>
+          <span class="brand-text">
+            <strong>Tatsuya Yamada</strong>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/profile/">Profile</a>
+          <a href="/research/">Research</a>
+          <a href="/publications/">Publications</a>
+          <a href="/cv/">CV</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </header>
+
+      <main class="subpage-main">
+        <!-- Fixed content: this page is the main place for profile basics and photo. -->
+        <section class="page-intro">
+          <p class="eyebrow">Profile</p>
+          <h1>Profile</h1>
+          <p class="lead">
+            This page summarizes basic academic information, affiliation, and a short research statement.
+          </p>
+        </section>
+
+        <!-- Semi-fixed content: revise only when affiliation, position, or biography meaningfully changes. -->
+        <section class="detail-grid single-column">
+          <article class="card">
+            <h2>Basic Information</h2>
+            <div class="info-split">
+              <div class="info-copy">
+                <dl class="stacked-list">
+                  <!-- NOTE: Replace this section with your finalized profile basics. -->
+                  <div>
+                    <dt>Name / 氏名</dt>
+                    <dd>Tatsuya Yamada（山田 達也）</dd>
+                  </div>
+                  <div>
+                <dt>Affiliation / 所属</dt>
+                <dd>
+                  The University of Osaka, Graduate School of Information Science and Technology
+                  <span class="secondary-text">大阪大学大学院 情報科学研究科</span>
+                </dd>
+              </div>
+              <div>
+                <dt>Position</dt>
+                <dd>
+                  Master's student
+                  <span class="secondary-text">博士前期課程</span>
+                </dd>
+              </div>
+                  <div>
+                    <dt>Research Areas</dt>
+                    <dd>Machine Learning / Causal Representation Learning / Explainable AI / Temporal Data</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="info-photo">
+                <!-- NOTE: Replace /assets/profile-photo.png if you want to update the portrait later. -->
+                <img
+                  class="profile-photo"
+                  src="/assets/profile-photo.png"
+                  alt="Portrait of Tatsuya Yamada"
+                />
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>Education</h2>
+            <!-- NOTE: Keep this timeline consistent with the CV page. -->
+            <div class="timeline">
+              <div>
+                <span class="timeline-year">Mar. 2021</span>
+                <p>Graduated from Miyazu High School.</p>
+              </div>
+              <div>
+                <span class="timeline-year">Apr. 2021</span>
+                <p>Entered the School of Engineering Science, The University of Osaka.</p>
+              </div>
+              <div>
+                <span class="timeline-year">Mar. 2025</span>
+                <p>Graduated from the School of Engineering Science, The University of Osaka.</p>
+              </div>
+              <div>
+                <span class="timeline-year">Apr. 2025</span>
+                <p>
+                  Entered the Master's Course in the Department of Information Systems Engineering,
+                  Graduate School of Information Science and Technology,
+                  The University of Osaka.
+                </p>
+              </div>
+              <div>
+                <span class="timeline-year">Apr. 2025-Present</span>
+                <p>Enrolled in the Humanware Innovation Program, The University of Osaka.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Occasional update: research statement can be revised when interests shift. -->
+        <section class="content-band">
+          <div class="band-header">
+            <p class="section-tag">Research Interests</p>
+            <h2>Statement</h2>
+          </div>
+          <article class="card">
+            <!-- NOTE: Replace with a short statement about your research interests. -->
+            <p>
+              I am interested in machine learning methods that improve interpretability and representation quality, especially in settings involving causal structure and temporal dynamics. More detailed descriptions are available on the <a href="/research/">Research</a> page.
+            </p>
+          </article>
+        </section>
+
+        <section class="content-band">
+          <div class="band-header">
+            <p class="section-tag">Awards</p>
+            <h2>Awards and Honors</h2>
+          </div>
+          <article class="card">
+            <!-- NOTE: Update data/awards.json instead of editing this list directly. -->
+            <ul class="policy-list stacked-items" data-awards-list="all"></ul>
+          </article>
+        </section>
+
+        <section class="content-band">
+          <div class="band-header">
+            <p class="section-tag">Links</p>
+            <h2>External Links</h2>
+          </div>
+          <article class="card">
+            <!-- NOTE: Replace these placeholder URLs with your actual ORCID and GitHub profile links. -->
+            <ul class="policy-list stacked-items">
+              <li><a href="https://orcid.org/0009-0006-8674-4829">ORCID</a></li>
+              <li><a href="https://github.com/tyamada02/">GitHub</a></li>
+            </ul>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-meta">© <span data-current-year></span> Tatsuya Yamada</p>
+      </footer>
+    </div>
+  </body>
+</html>
