@@ -1,6 +1,8 @@
 # Editing Guide
 
-このサイトは，次の3種類に分けて更新すると管理しやすくなります．
+このサイトは，`index.html` を中心にした1ページ構成で運用します．
+
+退避済みの `_multi_file_version_20260522/` は旧構成の保存用なので，通常運用では編集しません．
 
 ## 1. 基本的にあまり変えない部分
 
@@ -13,7 +15,6 @@
 主な対象ファイル:
 
 - `index.html`
-- `profile/index.html`
 - `styles.css`
 
 ## 2. ときどき見直す部分
@@ -22,38 +23,36 @@
 - 研究キーワード
 - 研究紹介文
 - 略歴
+- CV 要約
 
 主な対象ファイル:
 
 - `index.html`
-- `profile/index.html`
-- `research/index.html`
+- `styles.css`
 
 ## 3. 随時更新する部分
 
 - 論文
 - 発表
-- CV
-- 連絡先
 - 受賞
+- 連絡先
 
 主な対象ファイル:
 
 - `data/publications.json`
 - `data/awards.json`
-- `cv/index.html`
-- `contact/index.html`
+- `index.html`
 
 ## 最小運用ルール
 
-- `index.html` は短い自己紹介だけに保つ
-- `profile/index.html` は固定情報の置き場にする
-- `publications/index.html` を一番更新頻度の高いページとして使う
-- `cv/index.html` と `contact/index.html` は，情報確定後に埋める
+- `index.html` に Home, Profile, Research, Publications, CV, Contact をまとめて持たせる
+- セクション追加より前に，既存セクションへ統合できないかを先に考える
 - 論文・発表・受賞は，HTML ではなく `data/*.json` を更新する
+- 連絡先や外部リンクは，公開して問題ない情報だけに限定する
+- `_multi_file_version_20260522/` は参照用として残し，現行サイトの編集対象にしない
 
 ## NOTE の見方
 
 - `<!-- NOTE: ... -->` は，書き換えを想定している場所です
-- まず `index.html` と `profile/index.html` の NOTE を埋めると，全体が整いやすくなります
-- 次に `research/index.html` と `publications/index.html` を更新するのが自然です
+- まず `index.html` の NOTE を埋めると，全体が整いやすくなります
+- 論文や受賞の更新は `data/*.json` を優先します

@@ -6,15 +6,15 @@
     <title>Tatsuya Yamada</title>
     <meta
       name="description"
-      content="Personal academic website of Tatsuya Yamada, with research interests, publications, and profile."
+      content="Personal academic website of Tatsuya Yamada, including profile, research, publications, and contact information on a single page."
     />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
-  <body data-page="home">
+  <body data-page="home" id="top">
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="/">
+        <a class="brand" href="#top">
           <span class="brand-mark">TY</span>
           <span class="brand-text">
             <strong>Tatsuya Yamada</strong>
@@ -29,103 +29,265 @@
           Menu
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-          <a href="/">Home</a>
-          <a href="/profile/">Profile</a>
-          <a href="/research/">Research</a>
-          <a href="/publications/">Publications</a>
-          <a href="/cv/">CV</a>
-          <a href="/contact/">Contact</a>
+          <a href="#top">Home</a>
+          <a href="#profile">Profile</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#cv">CV</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main>
-        <!-- Fixed content: name, affiliation, photo, and short summary. Update only when profile basics change. -->
-        <section class="hero">
+        <section class="hero section-anchor" id="home">
           <article class="hero-panel">
             <div class="info-split">
               <div class="info-copy">
-                <!-- NOTE: Replace with your public name. -->
                 <h1 class="hero-name">
                   <span class="hero-name-main">Tatsuya Yamada</span>
                   <span class="hero-name-sub">（山田 達也）</span>
                 </h1>
-                <!-- NOTE: Replace with your current affiliation. -->
                 <p class="panel-label">Affiliation</p>
                 <p class="lead">
-                  Department of Information Systems Engineering,
-                  Graduate School of Information Science and Technology,
-                  The University of Osaka
+                  Master's student, Graduate School of Information Science and
+                  Technology, The University of Osaka
                 </p>
                 <p class="lead lead-note">
-                  （大阪大学大学院 情報科学研究科 情報システム工学専攻）
+                  （大阪大学大学院 情報科学研究科 博士前期課程）
+                </p>
+                <p class="panel-label">About Me</p>
+                <!-- <p class="panel-label">Overview</p> -->
+                <p class="lead compact-lead">
+                  <!-- I study machine learning methods that improve interpretability and
+                  representation quality, with a current focus on causal representation learning
+                  for temporal data and related temporal dynamics. -->
+                  I am a master's student at the University of Osaka.<br>
+                  My research interest lies in developing methods for training interpretable machine learning models.
                 </p>
                 <p class="panel-label">Research Keywords</p>
                 <ul class="topic-list">
                   <li>Causal Representation Learning</li>
-                  <li>Explainable AI</li>
                   <li>Temporal Data Analysis</li>
+                  <li>Explainable AI</li>
                 </ul>
-                <p class="panel-label">Links</p>
-                <div class="inline-links">
-                  <!-- NOTE: Replace these URLs if your public profiles change. -->
-                  <a href="https://orcid.org/0009-0006-8674-4829">ORCID</a>
-                  <a href="https://github.com/tyamada02/">GitHub</a>
-                </div>
               </div>
               <div class="info-photo">
-                <!-- NOTE: Replace /assets/profile-photo.png if you want to update the portrait later. -->
                 <img
                   class="profile-photo"
-                  src="/assets/profile-photo.png"
+                  src="./assets/profile-photo.png"
                   alt="Portrait of Tatsuya Yamada"
                 />
+                <div class="photo-links">
+                  <p class="panel-label">Links</p>
+                  <div class="inline-links">
+                    <a href="https://orcid.org/0009-0006-8674-4829">ORCID</a>
+                    <a href="https://github.com/tyamada02/">GitHub</a>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
         </section>
 
-        <!-- Semi-fixed content: keep this as a simple directory of the main pages. -->
-        <section class="content-band">
+        <section class="content-band section-anchor" id="profile">
           <div class="band-header">
-            <p class="section-tag">Page Links</p>
+            <p class="section-tag">Profile</p>
+            <h2>Basic Information</h2>
           </div>
+
+          <div class="detail-grid single-column">
+            <article class="card">
+              <h2>Identity and Affiliation</h2>
+              <dl class="stacked-list">
+                <div>
+                  <dt>Name / 氏名</dt>
+                  <dd>Tatsuya Yamada <span class="inline-note">（山田 達也）</span></dd>
+                </div>
+                <div>
+                  <dt>Affiliation / 所属</dt>
+                  <dd>
+                    The University of Osaka, Graduate School of Information Science and
+                    Technology, Department of Information Systems Engineering
+                    <a href="https://www.ist.osaka-u.ac.jp/english/">(click)</a>
+                    <span class="block-note">
+                      （大阪大学大学院 情報科学研究科 情報システム工学専攻）
+                    </span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Laboratory / 研究室</dt>
+                  <dd>
+                    Machine Learning &amp; Systems Laboratory
+                    <a href="https://mls.ist.osaka-u.ac.jp/en/member.html">(click)</a>
+                    <span class="block-note">（機械学習システム論講座）</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Position</dt>
+                  <dd>Master's student <span class="block-note">（博士前期課程）</span></dd>
+                </div>
+                <div>
+                  <dt>Research Areas</dt>
+                  <dd>Machine Learning / Causal Representation Learning / Explainable AI / Temporal Data</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card">
+              <h2>Education</h2>
+              <!--
+              <div class="timeline">
+                <div>
+                  <span class="timeline-year">Mar. 2021</span>
+                  <p>Graduated from Miyazu High School.</p>
+                </div>
+                <div>
+                  <span class="timeline-year">Apr. 2021</span>
+                  <p>Entered the School of Engineering Science, The University of Osaka.</p>
+                </div>
+                <div>
+                  <span class="timeline-year">Mar. 2025</span>
+                  <p>Graduated from the School of Engineering Science, The University of Osaka.</p>
+                </div>
+                <div>
+                  <span class="timeline-year">Apr. 2025</span>
+                  <p>
+                    Entered the Master's Course in the Department of Information Systems Engineering,
+                    Graduate School of Information Science and Technology,
+                    The University of Osaka.
+                  </p>
+                </div>
+                <div>
+                  <span class="timeline-year">Apr. 2025-Present</span>
+                  <p>Enrolled in the Humanware Innovation Program, The University of Osaka.</p>
+                </div>
+              </div>
+              -->
+              <div class="timeline">
+                <div>
+                  <span class="timeline-year">Apr. 2021 - Mar. 2025</span>
+                  <p>School of Engineering Science, The University of Osaka.</p>
+                </div>
+                <div>
+                  <span class="timeline-year">Apr. 2025 - Present</span>
+                  <p>
+                    Master's Program in Information Systems Engineering, Graduate School of
+                    Information Science and Technology, The University of Osaka.
+                  </p>
+                </div>
+                <div>
+                  <span class="timeline-year">Apr. 2025 - Present</span>
+                  <p>Humanware Innovation Program, The University of Osaka.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="card">
+            <h2>Awards and Honors</h2>
+            <ul class="policy-list stacked-items" data-awards-list="all"></ul>
+          </article>
+        </section>
+
+        <section class="content-band section-anchor" id="research">
+          <div class="band-header">
+            <p class="section-tag">Research</p>
+            <h2>Research Themes</h2>
+          </div>
+
           <div class="feature-grid">
-            <a class="feature-card" href="/profile/">
-              <strong>Profile</strong>
-              <span>Background, affiliation, and basic academic information.</span>
-            </a>
-            <a class="feature-card" href="/research/">
-              <strong>Research</strong>
-              <span>Research themes, interests, and current directions.</span>
-            </a>
-            <a class="feature-card" href="/publications/">
-              <strong>Publications</strong>
-              <span>Papers, talks, and related academic outputs.</span>
-            </a>
-            <a class="feature-card" href="/cv/">
-              <strong>CV</strong>
-              <span>A placeholder page until a full CV is added.</span>
-            </a>
-            <a class="feature-card" href="/contact/">
-              <strong>Contact</strong>
-              <span>Contact details will be added when finalized.</span>
-            </a>
+            <article class="feature-card static-card">
+              <strong>Causal Representation Learning</strong>
+              <span>
+                I study representation learning methods that aim to recover meaningful latent
+                structure from observed data, with emphasis on factors that are both predictive
+                and structurally interpretable.
+              </span>
+            </article>
+            <article class="feature-card static-card">
+              <strong>Temporal Data Analysis</strong>
+              <span>
+                <!-- I am particularly interested in time-series and other dynamically generated data,
+                where temporal structure creates challenges that are not captured by static data
+                alone. -->
+                I am particularly interested in time-series and other temporal data, where dependencies 
+                over time create challenges that are not captured by methods designed for static data.
+              </span>
+            </article>
+            <article class="feature-card static-card">
+              <strong>Explainable AI</strong>
+              <span>
+                A central motivation of my research is interpretability in machine learning. I am
+                interested in representations that are easier for humans to understand, analyze,
+                and connect to domain-relevant concepts.
+              </span>
+            </article>
+          </div>
+
+          <div class="detail-grid">
+            <article class="card">
+              <h2>Keywords</h2>
+              <ul class="tag-list">
+                <li>Causal Representation Learning</li>
+                <li>Temporal Data Analysis / Time-Series Data</li>
+                <li>Explainable AI / Interpretable Representation Learning</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h2>Current Interests</h2>
+              <p>
+                My current interest is in connecting representation learning, interpretability, and
+                causal structure, especially in settings where data are generated over time.
+              </p>
+            </article>
           </div>
         </section>
 
-        <section class="detail-grid">
-          <article class="card">
-            <p class="section-tag">Recent Updates</p>
-            <h2>Recent Publications</h2>
-            <!-- NOTE: Update data/publications.json instead of editing this list directly. -->
-            <ol class="publication-list" data-publications-list="recent-papers" data-limit="3"></ol>
+        <section class="content-band section-anchor" id="publications">
+          <div class="band-header">
+            <p class="section-tag">Publications</p>
+            <h2>Papers and Presentations</h2>
+          </div>
+
+          <div class="detail-grid single-column">
+            <article class="card">
+              <h2>Papers</h2>
+              <ol class="publication-list" data-publications-list="papers"></ol>
+            </article>
+
+            <article class="card">
+              <h2>Talks and Presentations</h2>
+              <ol class="publication-list" data-publications-list="talks"></ol>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-band section-anchor" id="cv">
+          <div class="band-header">
+            <p class="section-tag">CV</p>
+            <h2>Curriculum Vitae</h2>
+          </div>
+
+          <article class="card card-muted">
+            <h2>Status</h2>
+            <p>
+              A fuller CV page is currently in preparation.
+            </p>
+            <!-- <p>
+              <a class="inactive-link" href="./cv/" aria-disabled="true">CV page (preparing)</a>
+            </p> -->
           </article>
+        </section>
+
+        <section class="content-band section-anchor" id="contact">
+          <div class="band-header">
+            <p class="section-tag">Contact</p>
+            <h2>Contact Information</h2>
+          </div>
 
           <article class="card">
-            <p class="section-tag">Recent Updates</p>
-            <h2>Recent Awards</h2>
-            <!-- NOTE: Update data/awards.json instead of editing this list directly. -->
-            <ul class="policy-list stacked-items" data-awards-list="recent" data-limit="3"></ul>
+            <h2>Email</h2>
+            <p>t-yamada[at]ist.osaka-u.ac.jp</p>
           </article>
         </section>
       </main>

@@ -1,27 +1,44 @@
-const pageMap = {
-  home: "/",
-  profile: "/profile/",
-  research: "/research/",
-  publications: "/publications/",
-  cv: "/cv/",
-  contact: "/contact/",
-};
-
-const page = document.body.dataset.page;
-const currentLink = document.querySelector(`.site-nav a[href="${pageMap[page]}"]`);
-
-if (currentLink) {
-  currentLink.classList.add("is-current");
-  currentLink.setAttribute("aria-current", "page");
-}
-
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
+const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+function updateCurrentSection(hash) {
+  navLinks.forEach((link) => {
+    const isCurrent = link.getAttribute("href") === hash;
+    link.classList.toggle("is-current", isCurrent);
+
+    if (isCurrent) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+if (navLinks.length) {
+  const initialHash = window.location.hash || "#top";
+  updateCurrentSection(initialHash);
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      updateCurrentSection(link.getAttribute("href"));
+
+      if (siteNav && navToggle && siteNav.classList.contains("is-open")) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
+  window.addEventListener("hashchange", () => {
+    updateCurrentSection(window.location.hash || "#top");
   });
 }
 
@@ -50,11 +67,6 @@ async function loadJson(path) {
 
 function createPublicationItem(item) {
   const listItem = document.createElement("li");
-  const content = document.createElement(item.url ? "a" : "span");
-
-  if (item.url) {
-    content.href = item.url;
-  }
 
   if (item.authors) {
     const authors = document.createElement("span");
@@ -63,26 +75,32 @@ function createPublicationItem(item) {
       `<span class="author-highlight">${primaryAuthorName}</span>`
     );
     authors.innerHTML = highlightedAuthors;
-    content.append(authors);
+    listItem.append(authors);
   }
 
   if (item.year) {
-    content.append(` (${item.year})`);
+    listItem.append(` (${item.year})`);
   }
 
   if (item.title) {
-    content.append(` "${item.title}."`);
+    listItem.append(" ");
+    const titleNode = document.createElement(item.url ? "a" : "span");
+
+    if (item.url) {
+      titleNode.href = item.url;
+    }
+
+    titleNode.textContent = `"${item.title}."`;
+    listItem.append(titleNode);
   }
 
   if (item.venue) {
-    content.append(` ${item.venue}`);
+    listItem.append(` ${item.venue}`);
   }
 
   if (item.details) {
-    content.append(` ${item.details}`);
+    listItem.append(` ${item.details}`);
   }
-
-  listItem.append(content);
 
   return listItem;
 }
@@ -131,7 +149,7 @@ async function renderPublicationLists() {
   }
 
   try {
-    const data = await loadJson("/data/publications.json");
+    const data = await loadJson("./data/publications.json");
 
     containers.forEach((container) => {
       const mode = container.dataset.publicationsList;
@@ -174,7 +192,7 @@ async function renderAwardLists() {
   }
 
   try {
-    const data = await loadJson("/data/awards.json");
+    const data = await loadJson("./data/awards.json");
     const sorted = sortByYearDesc(data.awards || []);
 
     containers.forEach((container) => {
