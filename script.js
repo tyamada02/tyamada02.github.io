@@ -67,6 +67,7 @@ async function loadJson(path) {
 
 function createPublicationItem(item) {
   const listItem = document.createElement("li");
+  const isJournalCitation = item.citationStyle === "journal";
 
   if (item.authors) {
     const authors = document.createElement("span");
@@ -76,9 +77,13 @@ function createPublicationItem(item) {
     );
     authors.innerHTML = highlightedAuthors;
     listItem.append(authors);
+
+    if (isJournalCitation) {
+      listItem.append(",");
+    }
   }
 
-  if (item.year) {
+  if (item.year && !isJournalCitation) {
     listItem.append(` (${item.year})`);
   }
 
@@ -95,11 +100,23 @@ function createPublicationItem(item) {
   }
 
   if (item.venue) {
-    listItem.append(` ${item.venue}`);
+    if (isJournalCitation) {
+      listItem.append(", ");
+      const venue = document.createElement("em");
+      venue.textContent = item.venue;
+      listItem.append(venue);
+      listItem.append(",");
+    } else {
+      listItem.append(` ${item.venue}`);
+    }
   }
 
   if (item.details) {
     listItem.append(` ${item.details}`);
+  }
+
+  if (item.year && isJournalCitation) {
+    listItem.append(`, ${item.year}.`);
   }
 
   return listItem;
